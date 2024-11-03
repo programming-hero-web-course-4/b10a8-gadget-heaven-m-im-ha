@@ -4,6 +4,8 @@ import ErrorPage from "./ui/ErrorPage";
 import Home from "./ui/Home";
 import Dashboard from "./ui/Dashboard";
 import Stats from "./ui/Stats";
+import Cart from "./ui/Cart";
+import Wishlist from "./ui/Wishlist";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +24,14 @@ function App() {
         {
           path : "/stats",
           element : <Stats/>
+        },
+        {
+          path : "/cart",
+          element : <Cart/>
+        },
+        {
+          path : "/wishlist",
+          element : <Wishlist/>
         },
       ]
     }
