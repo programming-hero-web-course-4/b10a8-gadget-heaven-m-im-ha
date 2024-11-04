@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { ProductContext } from "../context/ProductsProvider";
 
 function Header() {
   const { pathname } = useLocation();
+  const { setSelectCategory,setIsDetailsView} = useContext(ProductContext);
+  
+  function handleLogoClick(){
+    setSelectCategory("All Product");
+    setIsDetailsView(false);
+  }
 
   return (
     <div className="bg-purple-400">
       <nav className="flex justify-between">
-        <NavLink to="/">Gadget Heaven</NavLink>
+        <NavLink onClick={handleLogoClick} to="/">Gadget Heaven</NavLink>
         <div className="flex gap-8">
           <NavLink
             className={pathname === "/home" ? `bg-green-600` : ``}

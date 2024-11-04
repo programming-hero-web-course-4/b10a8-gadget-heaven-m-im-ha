@@ -8,43 +8,45 @@ import Cart from "./ui/Cart";
 import Wishlist from "./ui/Wishlist";
 import { ProductsProvider } from "./context/ProductsProvider";
 
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/stats",
+        element: <Stats />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
+      },
+    ],
+  },
+]);
+
 function App() {
-  const router = createBrowserRouter([
-    {
-      element: <AppLayout />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/home",
-          element: <Home />,
-        },
-        {
-          path: "/dashboard",
-          element: <Dashboard />,
-        },
-        {
-          path: "/stats",
-          element: <Stats />,
-        },
-        {
-          path: "/cart",
-          element: <Cart />,
-        },
-        {
-          path: "/wishlist",
-          element: <Wishlist />,
-        },
-      ],
-    },
-  ]);
-  return;
-  <ProductsProvider>
-    <RouterProvider router={router} />
-  </ProductsProvider>;
+  return (
+    <ProductsProvider>
+      <RouterProvider router={router} />
+    </ProductsProvider>
+  );
 }
 
 export default App;
