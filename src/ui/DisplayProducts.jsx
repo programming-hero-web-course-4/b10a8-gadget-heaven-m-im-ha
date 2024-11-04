@@ -25,6 +25,8 @@ function DisplayProducts({ category }) {
 
   console.log(filteredProducts);
 
+  
+
   return (
     <div>
       {filteredProducts.length > 0 && (
@@ -40,7 +42,7 @@ function DisplayProducts({ category }) {
               </div>
               <h3>{product.product_title}</h3>
               <p>price : {product.price}</p>
-              <button className="rounded-xl border border-green-300 px-4 py-1">
+              <button onClick={handleProductDetails} className="rounded-xl border border-green-300 px-4 py-1">
                 View Details
               </button>
             </div>
