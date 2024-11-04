@@ -3,10 +3,11 @@ import { createContext, useState } from "react";
 export const ProductContext = createContext();
 
 export function ProductsProvider({ children }) {
-    const [selectCategory, setSelectCategory] = useState("All Product");
-  const [productDetails, setProductDetails] = useState({});
+  const [selectCategory, setSelectCategory] = useState("All Product");
+  const [productDetails, setProductDetails] = useState([]);
   const [isDetailsView, setIsDetailsView] = useState(false);
-  //   console.log(productDetails);
+  const [addToCart, setAddToCart] = useState([]);
+    console.log(addToCart);
 
   return (
     <ProductContext.Provider
@@ -15,7 +16,10 @@ export function ProductsProvider({ children }) {
         setProductDetails,
         isDetailsView,
         setIsDetailsView,
-        selectCategory, setSelectCategory
+        selectCategory,
+        setSelectCategory,
+        addToCart,
+        setAddToCart,
       }}
     >
       {children}

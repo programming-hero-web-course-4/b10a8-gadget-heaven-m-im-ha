@@ -2,8 +2,17 @@ import { useContext } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 
 function ProductDetails() {
-  const { productDetails } = useContext(ProductContext);
-  console.log(productDetails);
+  const { productDetails, addToCart, setAddToCart } =
+    useContext(ProductContext);
+  //   console.log(typeof productDetails);
+
+  function handleAddToCart(product) {
+    // console.log(product)
+    if (!addToCart.some((item) => item.product_id === product.product_id)) {
+      setAddToCart([...addToCart, product]);
+    }
+  }
+
   return (
     <div className="flex gap-10">
       <div>
@@ -18,16 +27,26 @@ function ProductDetails() {
         <p>{productDetails.description}</p>
         <div>
           <p>Specification :</p>
-          <ol className="list-decimal ml-4">
-            {productDetails.specification.map((item) => (
-              <li>{item}</li>
+          <ol className="ml-4 list-decimal">
+            {productDetails.specification.map((item, i) => (
+              <li key={i}>{item}</li>
             ))}
           </ol>
         </div>
         <h4>Rating⭐</h4>
         <div className="flex gap-10">
-          <button className="border border-green-300 px-2">Add to cart</button>
-          <button className="border border-green-300 px-2">Wishlist</button>
+          <button
+            onClick={() => handleAddToCart(productDetails)}
+            className="border border-green-300 px-2"
+          >
+            Add to cart
+          </button>
+          <button
+            onClick={() => handleWishlist(productDetails)}
+            className="border border-green-300 px-2"
+          >
+            Wishlist
+          </button>
         </div>
       </div>
     </div>
