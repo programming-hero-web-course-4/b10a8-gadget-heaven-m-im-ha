@@ -20,7 +20,7 @@
       "product_id": "LP002",
       "product_title": "MacBook Pro 14",
       "product_image": "https://shorturl.at/Eqqcy",
-      "category": "Laptop",
+      "category": "MacBook",
       "price": 1999.99,
       "description": "Premium laptop with M2 Pro chip for powerful performance.",
       "specification": [
@@ -36,7 +36,7 @@
       "product_id": "PH001",
       "product_title": "iPhone 15 Pro Max",
       "product_image": "https://shorturl.at/snNSa",
-      "category": "Phone",
+      "category": "iPhone",
       "price": 1099.99,
       "description": "Flagship smartphone with powerful A17 Bionic chip and stunning display.",
       "specification": [
@@ -68,7 +68,7 @@
       "product_id": "SW001",
       "product_title": "Apple Watch Series 9",
       "product_image": "https://shorturl.at/RCBpQ",
-      "category": "Smart Watch",
+      "category": "Accessories",
       "price": 399.99,
       "description": "Advanced smartwatch with health tracking features and stylish design.",
       "specification": [
@@ -84,7 +84,7 @@
       "product_id": "SW002",
       "product_title": "Samsung Galaxy Watch 6 Classic",
       "product_image": "https://t.ly/ZJ0_y",
-      "category": "Smart Watch",
+      "category": "Accessories",
       "price": 349.99,
       "description": "Classic smartwatch with rotating bezel and advanced health features.",
       "specification": [
@@ -100,7 +100,7 @@
       "product_id": "AC001",
       "product_title": "Apple AirPods Pro (2nd Generation)",
       "product_image": "https://t.ly/U6b3D",
-      "category": "Accessory",
+      "category": "Accessories",
       "price": 249.99,
       "description": "Premium wireless earbuds with active noise cancellation and spatial audio.",
       "specification": [
@@ -116,7 +116,7 @@
       "product_id": "AC002",
       "product_title": "Samsung Galaxy Buds 2 Pro",
       "product_image": "https://t.ly/9hhcX",
-      "category": "Accessory",
+      "category": "Accessories",
       "price": 229.99,
       "description": "High-quality wireless earbuds with excellent sound quality and ANC.",
       "specification": [
@@ -164,7 +164,7 @@
       "product_id": "SW003",
       "product_title": "Fitbit Versa 4",
       "product_image": "https://shorturl.at/4n08z",
-      "category": "Smart Watch",
+      "category": "Accessories",
       "price": 229.99,
       "description": "Fitness-focused smartwatch with accurate heart rate tracking and sleep monitoring.",
       "specification": [
@@ -180,7 +180,7 @@
       "product_id": "AC003",
       "product_title": "Anker Soundcore Liberty 4",
       "product_image": "https://shorturl.at/VGaSM",
-      "category": "Accessory",
+      "category": "Accessories",
       "price": 149.99,
       "description": "Affordable wireless earbuds with excellent sound quality and ANC.",
       "specification": [
@@ -196,7 +196,7 @@
         "product_id": "LP004",
         "product_title": "MacBook Air M2",
         "product_image": "https://shorturl.at/BwLLo",
-        "category": "Laptop",
+        "category": "MacBook",
         "price": 999.99,
         "description": "Lightweight and powerful laptop with M2 chip.",
         "specification": [
@@ -228,7 +228,7 @@
         "product_id": "SW004",
         "product_title": "Xiaomi Mi Watch",
         "product_image": "https://t.ly/EJLdR",
-        "category": "Smart Watch",
+        "category": "Accessories",
         "price": 199.99,
         "description": "Affordable smartwatch with basic fitness tracking features.",
         "specification": [
@@ -243,7 +243,7 @@
         "product_id": "AC004",
         "product_title": "Jabra Elite 85t",
         "product_image": "https://t.ly/aZFiT",
-        "category": "Accessory",
+        "category": "Accessories",
         "price": 229.99,
         "description": "Noise-canceling earbuds with excellent call quality.",
         "specification": [

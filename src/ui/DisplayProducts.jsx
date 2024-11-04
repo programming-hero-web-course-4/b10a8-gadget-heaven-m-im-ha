@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function DisplayProducts() {
+function DisplayProducts({ category }) {
   const [products, setProducts] = useState([]);
   //   console.log(products);
 
@@ -9,6 +9,7 @@ function DisplayProducts() {
       try {
         const response = await fetch("./assets/data/products.json");
         const data = await response.json();
+        // console.log(data)
         setProducts(data.products);
       } catch (error) {
         console.error(error);
@@ -17,11 +18,18 @@ function DisplayProducts() {
     fetchData();
   }, []);
 
+  const filteredProducts =
+    category === "All Product"
+      ? products
+      : products.filter((product) => product.category === category);
+
+  console.log(filteredProducts);
+
   return (
     <div>
-      {products.length > 0 && (
+      {filteredProducts.length > 0 && (
         <div className="grid grid-cols-3 gap-10">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div className="" key={product.product_id}>
               <div className="w-full">
                 <img
