@@ -3,7 +3,7 @@
     {
       "product_id": "LP001",
       "product_title": "Dell XPS 13",
-      "product_image": "https://example.com/images/dell-xps-13.jpg",
+      "product_image": "https://shorturl.at/x2u0n",
       "category": "Laptop",
       "price": 1299.99,
       "description": "Powerful 13-inch laptop with stunning display and long battery life.",
@@ -19,7 +19,7 @@
     {
       "product_id": "LP002",
       "product_title": "MacBook Pro 14",
-      "product_image": "https://example.com/images/macbook-pro-14.jpg",
+      "product_image": "https://shorturl.at/Eqqcy",
       "category": "Laptop",
       "price": 1999.99,
       "description": "Premium laptop with M2 Pro chip for powerful performance.",
@@ -35,7 +35,7 @@
     {
       "product_id": "PH001",
       "product_title": "iPhone 15 Pro Max",
-      "product_image": "https://example.com/images/iphone-15-pro-max.jpg",
+      "product_image": "https://shorturl.at/snNSa",
       "category": "Phone",
       "price": 1099.99,
       "description": "Flagship smartphone with powerful A17 Bionic chip and stunning display.",
@@ -51,7 +51,7 @@
     {
       "product_id": "PH002",
       "product_title": "Samsung Galaxy S24 Ultra",
-      "product_image": "https://example.com/images/galaxy-s24-ultra.jpg",
+      "product_image": "https://shorturl.at/REE8l",
       "category": "Phone",
       "price": 1199.99,
       "description": "Android powerhouse with impressive camera system and long battery life.",
@@ -67,7 +67,7 @@
     {
       "product_id": "SW001",
       "product_title": "Apple Watch Series 9",
-      "product_image": "https://example.com/images/apple-watch-series-9.jpg",
+      "product_image": "https://shorturl.at/RCBpQ",
       "category": "Smart Watch",
       "price": 399.99,
       "description": "Advanced smartwatch with health tracking features and stylish design.",
@@ -83,7 +83,7 @@
     {
       "product_id": "SW002",
       "product_title": "Samsung Galaxy Watch 6 Classic",
-      "product_image": "https://example.com/images/galaxy-watch-6-classic.jpg",
+      "product_image": "https://t.ly/ZJ0_y",
       "category": "Smart Watch",
       "price": 349.99,
       "description": "Classic smartwatch with rotating bezel and advanced health features.",
@@ -99,7 +99,7 @@
     {
       "product_id": "AC001",
       "product_title": "Apple AirPods Pro (2nd Generation)",
-      "product_image": "https://example.com/images/airpods-pro-2.jpg",
+      "product_image": "https://t.ly/U6b3D",
       "category": "Accessory",
       "price": 249.99,
       "description": "Premium wireless earbuds with active noise cancellation and spatial audio.",
@@ -115,7 +115,7 @@
     {
       "product_id": "AC002",
       "product_title": "Samsung Galaxy Buds 2 Pro",
-      "product_image": "https://example.com/images/galaxy-buds-2-pro.jpg",
+      "product_image": "https://t.ly/9hhcX",
       "category": "Accessory",
       "price": 229.99,
       "description": "High-quality wireless earbuds with excellent sound quality and ANC.",
@@ -131,7 +131,7 @@
     {
       "product_id": "LP003",
       "product_title": "HP Spectre x360",
-      "product_image": "https://example.com/images/hp-spectre-x360.jpg",
+      "product_image": "https://t.ly/q8VBz",
       "category": "Laptop",
       "price": 1499.99,
       "description": "Versatile 2-in-1 laptop with stunning OLED display and powerful performance.",
@@ -147,7 +147,7 @@
     {
       "product_id": "PH003",
       "product_title": "Google Pixel 8 Pro",
-      "product_image": "https://example.com/images/pixel-8-pro.jpg",
+      "product_image": "https://shorturl.at/8MJiz",
       "category": "Phone",
       "price": 999.99,
       "description": "Pixel smartphone with impressive camera capabilities and pure Android experience.",
@@ -163,7 +163,7 @@
     {
       "product_id": "SW003",
       "product_title": "Fitbit Versa 4",
-      "product_image": "https://example.com/images/fitbit-versa-4.jpg",
+      "product_image": "https://shorturl.at/4n08z",
       "category": "Smart Watch",
       "price": 229.99,
       "description": "Fitness-focused smartwatch with accurate heart rate tracking and sleep monitoring.",
@@ -179,7 +179,7 @@
     {
       "product_id": "AC003",
       "product_title": "Anker Soundcore Liberty 4",
-      "product_image": "https://example.com/images/soundcore-liberty-4.jpg",
+      "product_image": "https://shorturl.at/VGaSM",
       "category": "Accessory",
       "price": 149.99,
       "description": "Affordable wireless earbuds with excellent sound quality and ANC.",
@@ -195,7 +195,7 @@
     {
         "product_id": "LP005",
         "product_title": "MacBook Air M2",
-        "product_image": "https://example.com/images/macbook-air-m2.jpg",
+        "product_image": "https://shorturl.at/BwLLo",
         "category": "Laptop",
         "price": 999.99,
         "description": "Lightweight and powerful laptop with M2 chip.",
@@ -211,7 +211,7 @@
     {
         "product_id": "PH004",
         "product_title": "Google Pixel 8",
-        "product_image": "https://example.com/images/pixel-8.jpg",
+        "product_image": "https://shorturl.at/6ViKQ",
         "category": "Phone",
         "price": 799.99,
         "description": "Compact Pixel phone with great camera and performance.",
@@ -227,7 +227,7 @@
     {
         "product_id": "SW004",
         "product_title": "Xiaomi Mi Watch",
-        "product_image": "https://example.com/images/xiaomi-mi-watch.jpg",
+        "product_image": "https://t.ly/EJLdR",
         "category": "Smart Watch",
         "price": 199.99,
         "description": "Affordable smartwatch with basic fitness tracking features.",
@@ -242,7 +242,7 @@
     {
         "product_id": "AC004",
         "product_title": "Jabra Elite 85t",
-        "product_image": "https://example.com/images/jabra-elite-85t.jpg",
+        "product_image": "https://t.ly/aZFiT",
         "category": "Accessory",
         "price": 229.99,
         "description": "Noise-canceling earbuds with excellent call quality.",
@@ -255,19 +255,20 @@
         "rating": 4.5
     },
     {
-        "product_id": "AC005",
-        "product_title": "Anker PowerCore 20000 PD",
-        "product_image": "https://example.com/images/anker-powercore-20000-pd.jpg",
-        "category": "Accessory",
-        "price": 49.99,
-        "description": "Portable power bank with high-speed charging.",
-        "specification": [
-            "20000mAh capacity",
-            "Power Delivery 3.0",
-            "PowerIQ 3.0"
-        ],
-        "availability": true,
-        "rating": 4.7
-    }
+      "product_id": "LP006",
+      "product_title": "Lenovo ThinkPad X1 Carbon Gen 11",
+      "product_image": "https://example.com/images/lenovo-thinkpad-x1-carbon-gen11.jpg",
+      "category": "Laptop",
+      "price": 1799.99,
+      "description": "Ultra-portable business laptop with powerful performance and long battery life.",
+      "specification": [
+          "Intel Core i7-13th Gen",
+          "16GB RAM",
+          "512GB SSD",
+          "Windows 11 Pro"
+      ],
+      "availability": true,
+      "rating": 4.7
+  }
   ]
 }
