@@ -193,7 +193,7 @@
       "rating": 4.6
     },
     {
-        "product_id": "LP005",
+        "product_id": "LP004",
         "product_title": "MacBook Air M2",
         "product_image": "https://shorturl.at/BwLLo",
         "category": "Laptop",
@@ -255,9 +255,9 @@
         "rating": 4.5
     },
     {
-      "product_id": "LP006",
+      "product_id": "LP005",
       "product_title": "Lenovo ThinkPad X1 Carbon Gen 11",
-      "product_image": "https://example.com/images/lenovo-thinkpad-x1-carbon-gen11.jpg",
+      "product_image": "https://shorturl.at/pqJZv",
       "category": "Laptop",
       "price": 1799.99,
       "description": "Ultra-portable business laptop with powerful performance and long battery life.",
