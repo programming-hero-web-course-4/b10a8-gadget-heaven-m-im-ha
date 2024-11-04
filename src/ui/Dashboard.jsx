@@ -2,8 +2,13 @@ import { useContext } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 
 function Dashboard() {
-  const { addToCart } = useContext(ProductContext);
+  const { addToCart,setAddToCart } = useContext(ProductContext);
   console.log(addToCart);
+
+  function handleDeleteItem(item){
+    const filteredItem = addToCart.filter((el)=>el.product_id !== item.product_id);
+    setAddToCart(filteredItem);
+  }
 
   return (
     <div>
@@ -30,7 +35,7 @@ function Dashboard() {
                 <p>{item.description}</p>
                 <p>price : {item.price}</p>
               </div>
-              <button>✖️</button>
+              <button onClick={()=>handleDeleteItem(item)}>✖️</button>
             </div>
           ))}
       </div>
