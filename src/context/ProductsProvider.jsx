@@ -4,10 +4,10 @@ export const ProductContext = createContext();
 
 export function ProductsProvider({ children }) {
   const [selectCategory, setSelectCategory] = useState("All Product");
-  const [productDetails, setProductDetails] = useState([]);
+  const [productDetails, setProductDetails] = useState({});
   const [isDetailsView, setIsDetailsView] = useState(false);
   const [addToCart, setAddToCart] = useState([]);
-    console.log(addToCart);
+    // console.log(addToCart);
 
   return (
     <ProductContext.Provider
