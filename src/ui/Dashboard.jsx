@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 import { useNavigate } from "react-router-dom";
 
-
 function Dashboard() {
   const { addToCart, setAddToCart, wishlist, setWishlist } =
     useContext(ProductContext);
@@ -21,7 +20,7 @@ function Dashboard() {
       modalRef.current.showModal();
     }
   }
-  
+
   function handleCloseModal() {
     setShowModal(false);
     setAddToCart([]);
@@ -77,7 +76,7 @@ function Dashboard() {
             Cart
           </button>
           <button
-           className={`${isCart ? `` : `bg-green-400`} border border-pink-600 px-4 py-1`}
+            className={`${isCart ? `` : `bg-green-400`} border border-pink-600 px-4 py-1`}
             onClick={() => setIsCart(false)}
           >
             Wishlist
@@ -111,36 +110,38 @@ function Dashboard() {
         </div>
       )}
       <div className="grid grid-cols-1">
-        {isCart
-          ? addToCart.length > 0 &&
-            addToCart.map((item) => (
-              <div key={item.product_id} className="flex gap-10">
-                <div>
-                  <img className="w-40" src={item.product_image} alt="" />
-                </div>
-                <div className="flex flex-col gap-3">
-                  <h4>{item.product_title}</h4>
-                  <p>{item.description}</p>
-                  <p>price : {item.price}</p>
-                </div>
-                <button onClick={() => handleDeleteCartItem(item)}>✖️</button>
+        {isCart ? (
+          addToCart.length > 0 &&
+          addToCart.map((item) => (
+            <div key={item.product_id} className="flex gap-10">
+              <div>
+                <img className="w-40" src={item.product_image} alt="" />
               </div>
-            ))
-          : wishlist.map((item) => (
-              <div key={item.product_id} className="flex gap-10">
-                <div>
-                  <img className="w-40" src={item.product_image} alt="" />
-                </div>
-                <div className="flex flex-col gap-3">
-                  <h4>{item.product_title}</h4>
-                  <p>{item.description}</p>
-                  <p>price : {item.price}</p>
-                </div>
-                <button onClick={() => handleDeleteWishlistItem(item)}>
-                  ✖️
-                </button>
+              <div className="flex flex-col gap-3">
+                <h4>{item.product_title}</h4>
+                <p>{item.description}</p>
+                <p>price : {item.price}</p>
               </div>
-            ))}
+              <button onClick={() => handleDeleteCartItem(item)}>✖️</button>
+            </div>
+          ))
+        ) : wishlist.length > 0 ? (
+          wishlist.map((item) => (
+            <div key={item.product_id} className="flex gap-10">
+              <div>
+                <img className="w-40" src={item.product_image} alt="" />
+              </div>
+              <div className="flex flex-col gap-3">
+                <h4>{item.product_title}</h4>
+                <p>{item.description}</p>
+                <p>price : {item.price}</p>
+              </div>
+              <button onClick={() => handleDeleteWishlistItem(item)}>✖️</button>
+            </div>
+          ))
+        ) : (
+          <h1>Add products for wishlist</h1>
+        )}
       </div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       {showModal && (

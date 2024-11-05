@@ -2,7 +2,7 @@
   "products": [
     {
       "product_id": "LP001",
-      "product_title": "Dell XPS 13",
+      "product_title": "Dell XPS",
       "product_image": "https://shorturl.at/x2u0n",
       "category": "Laptop",
       "price": 1299.99,
@@ -34,7 +34,7 @@
     },
     {
       "product_id": "PH001",
-      "product_title": "iPhone 15 Pro Max",
+      "product_title": "iPhone 15",
       "product_image": "https://shorturl.at/snNSa",
       "category": "iPhone",
       "price": 1099.99,
@@ -50,7 +50,7 @@
     },
     {
       "product_id": "PH002",
-      "product_title": "Samsung Galaxy S24 Ultra",
+      "product_title": "Samsung S24 Ultra",
       "product_image": "https://shorturl.at/REE8l",
       "category": "Phone",
       "price": 1199.99,
@@ -66,7 +66,7 @@
     },
     {
       "product_id": "SW001",
-      "product_title": "Apple Watch Series 9",
+      "product_title": "Apple Watch 9",
       "product_image": "https://shorturl.at/RCBpQ",
       "category": "Accessories",
       "price": 399.99,
@@ -82,7 +82,7 @@
     },
     {
       "product_id": "SW002",
-      "product_title": "Samsung Galaxy Watch 6 Classic",
+      "product_title": "Samsung Watch 6",
       "product_image": "https://t.ly/ZJ0_y",
       "category": "Accessories",
       "price": 349.99,
@@ -98,7 +98,7 @@
     },
     {
       "product_id": "AC001",
-      "product_title": "Apple AirPods Pro (2nd Generation)",
+      "product_title": "Apple AirPod",
       "product_image": "https://t.ly/U6b3D",
       "category": "Accessories",
       "price": 249.99,
@@ -114,7 +114,7 @@
     },
     {
       "product_id": "AC002",
-      "product_title": "Samsung Galaxy Buds 2 Pro",
+      "product_title": "Galaxy Buds",
       "product_image": "https://t.ly/9hhcX",
       "category": "Accessories",
       "price": 229.99,
@@ -130,7 +130,7 @@
     },
     {
       "product_id": "LP003",
-      "product_title": "HP Spectre x360",
+      "product_title": "HP x360",
       "product_image": "https://t.ly/q8VBz",
       "category": "Laptop",
       "price": 1499.99,
@@ -146,7 +146,7 @@
     },
     {
       "product_id": "PH003",
-      "product_title": "Google Pixel 8 Pro",
+      "product_title": "Google 8",
       "product_image": "https://shorturl.at/8MJiz",
       "category": "Phone",
       "price": 999.99,
@@ -162,7 +162,7 @@
     },
     {
       "product_id": "SW003",
-      "product_title": "Fitbit Versa 4",
+      "product_title": "Fitbit 4",
       "product_image": "https://shorturl.at/4n08z",
       "category": "Accessories",
       "price": 229.99,
@@ -178,7 +178,7 @@
     },
     {
       "product_id": "AC003",
-      "product_title": "Anker Soundcore Liberty 4",
+      "product_title": "Anker 4",
       "product_image": "https://shorturl.at/VGaSM",
       "category": "Accessories",
       "price": 149.99,
@@ -194,7 +194,7 @@
     },
     {
         "product_id": "LP004",
-        "product_title": "MacBook Air M2",
+        "product_title": "MacBook M2",
         "product_image": "https://shorturl.at/BwLLo",
         "category": "MacBook",
         "price": 999.99,
@@ -210,7 +210,7 @@
     },
     {
         "product_id": "PH004",
-        "product_title": "Google Pixel 8",
+        "product_title": "Google 8",
         "product_image": "https://shorturl.at/6ViKQ",
         "category": "Phone",
         "price": 799.99,
@@ -226,7 +226,7 @@
     },
     {
         "product_id": "SW004",
-        "product_title": "Xiaomi Mi Watch",
+        "product_title": "Mi Watch",
         "product_image": "https://t.ly/EJLdR",
         "category": "Accessories",
         "price": 199.99,
@@ -241,7 +241,7 @@
     },
     {
         "product_id": "AC004",
-        "product_title": "Jabra Elite 85t",
+        "product_title": "Jabra 85t",
         "product_image": "https://t.ly/aZFiT",
         "category": "Accessories",
         "price": 229.99,
@@ -256,7 +256,7 @@
     },
     {
       "product_id": "LP005",
-      "product_title": "Lenovo ThinkPad X1 Carbon Gen 11",
+      "product_title": "Lenovo X1",
       "product_image": "https://shorturl.at/pqJZv",
       "category": "Laptop",
       "price": 1799.99,
