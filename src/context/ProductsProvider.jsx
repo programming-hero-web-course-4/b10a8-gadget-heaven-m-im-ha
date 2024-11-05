@@ -8,6 +8,7 @@ export function ProductsProvider({ children }) {
   const [isDetailsView, setIsDetailsView] = useState(false);
   const [addToCart, setAddToCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  // const [rating, setRating] = useState(0);
   // console.log(addToCart);
   console.log(wishlist);
 

@@ -2,10 +2,16 @@ import { useContext } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReactStars from "react-rating-stars-component";
 
 function ProductDetails() {
-  const { productDetails, addToCart, setAddToCart, wishlist, setWishlist } =
-    useContext(ProductContext);
+  const {
+    productDetails,
+    addToCart,
+    setAddToCart,
+    wishlist,
+    setWishlist,
+  } = useContext(ProductContext);
   //   console.log(typeof productDetails);
 
   function handleAddToCart(product) {
@@ -41,6 +47,19 @@ function ProductDetails() {
     }
   }
 
+  const stars = {
+    size: 18,
+    count: 5,
+    color: "black",
+    activeColor: "yellow",
+    value: productDetails.rating,
+    a11y: true,
+    isHalf: true,
+    emptyIcon: <i className="far fa-star" />,
+    halfIcon: <i className="fa fa-star-half-alt" />,
+    filledIcon: <i className="fa fa-star" />,
+  };
+
   return (
     <div className="flex gap-10">
       <ToastContainer />
@@ -63,6 +82,10 @@ function ProductDetails() {
           </ol>
         </div>
         <h4>Rating⭐</h4>
+        <div className="flex gap-4 items-center">
+          <ReactStars classNames="flex gap-1" {...stars}/>
+          <p>{productDetails.rating}</p>
+        </div>
         <div className="flex gap-10">
           <button
             onClick={() => handleAddToCart(productDetails)}
