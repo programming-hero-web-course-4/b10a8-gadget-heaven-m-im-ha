@@ -9,6 +9,7 @@ export function ProductsProvider({ children }) {
   const [addToCart, setAddToCart] = useState([]);
     // console.log(addToCart);
 
+
   return (
     <ProductContext.Provider
       value={{

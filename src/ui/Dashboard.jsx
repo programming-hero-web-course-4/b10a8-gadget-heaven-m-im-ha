@@ -3,19 +3,28 @@ import { ProductContext } from "../context/ProductsProvider";
 
 function Dashboard() {
   const { addToCart, setAddToCart } = useContext(ProductContext);
-  console.log(addToCart);
+  // console.log(addToCart);
+
+  function handleSortByPrice() {
+    // console.log(`click`)
+    const sortedItemByPrice =
+      addToCart.length > 0 && [...addToCart].sort((a, b) => b.price - a.price);
+      // console.log(sortedItemByPrice);
+    setAddToCart(sortedItemByPrice);
+  }
 
   function handleDeleteItem(item) {
     const filteredItem = addToCart.filter(
       (el) => el.product_id !== item.product_id,
     );
-    setAddToCart(filteredItem);
+    setAddToCart(filteredItem); 
   }
 
-  const totalCost = addToCart.length > 0 ? addToCart.reduce((prev,cur)=>prev+cur.price,0) : 0;
-  console.log(totalCost)
-
-
+  const totalCost =
+    addToCart.length > 0
+      ? addToCart.reduce((prev, cur) => prev + cur.price, 0)
+      : 0;
+  // console.log(totalCost);
 
   return (
     <div>
@@ -25,7 +34,7 @@ function Dashboard() {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
-        <div className="flex gap-10 justify-center">
+        <div className="flex justify-center gap-10">
           <button className="border border-pink-600 px-4 py-1">Cart</button>
           <button className="border border-pink-600 px-4 py-1">Wishlist</button>
         </div>
@@ -33,10 +42,17 @@ function Dashboard() {
       <div className="flex justify-between">
         <h3>Cart</h3>
         <div className="flex gap-8">
-          <h4>Total Cost : ${totalCost}</h4>
+          <h4>Total Cost : ${totalCost.toFixed(2)}</h4>
           <div className="flex gap-6">
-            <button className="border border-pink-400 px-3 py-1">Sort by price</button>
-            <button className="border border-pink-400 px-3 py-1">Purchase</button>
+            <button
+              onClick={handleSortByPrice}
+              className="border border-pink-400 px-3 py-1"
+            >
+              Sort by price
+            </button>
+            <button className="border border-pink-400 px-3 py-1">
+              Purchase
+            </button>
           </div>
         </div>
       </div>
