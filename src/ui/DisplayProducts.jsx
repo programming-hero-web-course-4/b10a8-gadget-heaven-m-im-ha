@@ -4,7 +4,7 @@ import { ProductContext } from "../context/ProductsProvider";
 function DisplayProducts({ category }) {
   const [products, setProducts] = useState([]);
   //   console.log(products);
-  const {setProductDetails,setIsDetailsView} = useContext(ProductContext);
+  const { setProductDetails, setIsDetailsView } = useContext(ProductContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -25,9 +25,9 @@ function DisplayProducts({ category }) {
       ? products
       : products.filter((product) => product.category === category);
 
-//   console.log(filteredProducts);
+  //   console.log(filteredProducts);
 
-  function handleProductDetails(product){
+  function handleProductDetails(product) {
     setProductDetails(product);
     setIsDetailsView(true);
   }
@@ -47,7 +47,10 @@ function DisplayProducts({ category }) {
               </div>
               <h3>{product.product_title}</h3>
               <p>price : {product.price}</p>
-              <button onClick={()=>handleProductDetails(product)} className="rounded-xl border border-green-300 px-4 py-1">
+              <button
+                onClick={() => handleProductDetails(product)}
+                className="rounded-xl border border-green-300 px-4 py-1"
+              >
                 View Details
               </button>
             </div>

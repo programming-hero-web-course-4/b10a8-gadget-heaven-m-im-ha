@@ -1,15 +1,31 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 
 function Dashboard() {
   const { addToCart, setAddToCart } = useContext(ProductContext);
+  const [showModal, setShowModal] = useState(false);
+  const modalRef = useRef(null);
+  // console.log(modalRef);
   // console.log(addToCart);
+
+  function handleOpenModal(e) {
+    e.preventDefault();
+    // console.log(`click`);
+    setShowModal(true);
+    if (modalRef.current) {
+      modalRef.current.showModal();
+    }
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
+  }
 
   function handleSortByPrice() {
     // console.log(`click`)
     const sortedItemByPrice =
       addToCart.length > 0 && [...addToCart].sort((a, b) => b.price - a.price);
-      // console.log(sortedItemByPrice);
+    // console.log(sortedItemByPrice);
     setAddToCart(sortedItemByPrice);
   }
 
@@ -17,7 +33,7 @@ function Dashboard() {
     const filteredItem = addToCart.filter(
       (el) => el.product_id !== item.product_id,
     );
-    setAddToCart(filteredItem); 
+    setAddToCart(filteredItem);
   }
 
   const totalCost =
@@ -25,6 +41,12 @@ function Dashboard() {
       ? addToCart.reduce((prev, cur) => prev + cur.price, 0)
       : 0;
   // console.log(totalCost);
+
+  useEffect(() => {
+    if (showModal && modalRef.current) {
+      modalRef.current.showModal();
+    }
+  }, [showModal]);
 
   return (
     <div>
@@ -50,7 +72,10 @@ function Dashboard() {
             >
               Sort by price
             </button>
-            <button className="border border-pink-400 px-3 py-1">
+            <button
+              onClick={handleOpenModal}
+              className="border border-pink-400 px-3 py-1"
+            >
               Purchase
             </button>
           </div>
@@ -72,6 +97,28 @@ function Dashboard() {
             </div>
           ))}
       </div>
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+      {showModal && (
+        <dialog
+          id="my_modal_5"
+          className="modal modal-bottom sm:modal-middle"
+          ref={modalRef}
+        >
+          <div className="modal-box flex flex-col items-center justify-center">
+            <img src="/assets/Group.png" alt="" />
+            <h3 className="text-lg font-bold">Payment Successfully</h3>
+            <p className="py-2">Thanks for purchasing.</p>
+            <p className="py-2">Total: {totalCost.toFixed(2)}</p>
+            <div className="modal-action">
+              <form className="w-full" method="dialog">
+                <button onClick={handleCloseModal} className="btn">
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      )}
     </div>
   );
 }
