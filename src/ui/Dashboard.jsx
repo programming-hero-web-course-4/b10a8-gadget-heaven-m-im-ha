@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const { addToCart, setAddToCart, wishlist, setWishlist } =
@@ -7,6 +8,7 @@ function Dashboard() {
   const [showModal, setShowModal] = useState(false);
   const [isCart, setIsCart] = useState(true);
   const modalRef = useRef(null);
+  const navigate = useNavigate();
   // console.log(modalRef);
   // console.log(addToCart);
 
@@ -18,9 +20,11 @@ function Dashboard() {
       modalRef.current.showModal();
     }
   }
-
+  
   function handleCloseModal() {
     setShowModal(false);
+    setAddToCart([]);
+    navigate("/");
   }
 
   function handleSortByPrice() {
