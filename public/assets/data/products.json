@@ -193,66 +193,66 @@
       "rating": 4.6
     },
     {
-        "product_id": "LP004",
-        "product_title": "MacBook M2",
-        "product_image": "https://shorturl.at/BwLLo",
-        "category": "MacBook",
-        "price": 999.99,
-        "description": "Lightweight and powerful laptop with M2 chip.",
-        "specification": [
-            "Apple M2 chip",
-            "8GB RAM",
-            "256GB SSD",
-            "macOS Ventura"
-        ],
-        "availability": true,
-        "rating": 4.8
+      "product_id": "LP004",
+      "product_title": "MacBook M2",
+      "product_image": "https://shorturl.at/BwLLo",
+      "category": "MacBook",
+      "price": 999.99,
+      "description": "Lightweight and powerful laptop with M2 chip.",
+      "specification": [
+        "Apple M2 chip",
+        "8GB RAM",
+        "256GB SSD",
+        "macOS Ventura"
+      ],
+      "availability": true,
+      "rating": 4.8
     },
     {
-        "product_id": "PH004",
-        "product_title": "Google 8",
-        "product_image": "https://shorturl.at/6ViKQ",
-        "category": "Phone",
-        "price": 799.99,
-        "description": "Compact Pixel phone with great camera and performance.",
-        "specification": [
-            "Google Tensor G3",
-            "6.1-inch Smooth Display",
-            "128GB storage",
-            "Android 14"
-        ],
-        "availability": true,
-        "rating": 4.6
+      "product_id": "PH004",
+      "product_title": "Google 8",
+      "product_image": "https://shorturl.at/6ViKQ",
+      "category": "Phone",
+      "price": 799.99,
+      "description": "Compact Pixel phone with great camera and performance.",
+      "specification": [
+        "Google Tensor G3",
+        "6.1-inch Smooth Display",
+        "128GB storage",
+        "Android 14"
+      ],
+      "availability": true,
+      "rating": 4.6
     },
     {
-        "product_id": "SW004",
-        "product_title": "Mi Watch",
-        "product_image": "https://t.ly/EJLdR",
-        "category": "Accessories",
-        "price": 199.99,
-        "description": "Affordable smartwatch with basic fitness tracking features.",
-        "specification": [
-            "Heart rate monitoring",
-            "Step tracking",
-            "Sleep tracking"
-        ],
-        "availability": true,
-        "rating": 4.2
+      "product_id": "SW004",
+      "product_title": "Mi Watch",
+      "product_image": "https://t.ly/EJLdR",
+      "category": "Accessories",
+      "price": 199.99,
+      "description": "Affordable smartwatch with basic fitness tracking features.",
+      "specification": [
+        "Heart rate monitoring",
+        "Step tracking",
+        "Sleep tracking"
+      ],
+      "availability": true,
+      "rating": 4.2
     },
     {
-        "product_id": "AC004",
-        "product_title": "Jabra 85t",
-        "product_image": "https://t.ly/aZFiT",
-        "category": "Accessories",
-        "price": 229.99,
-        "description": "Noise-canceling earbuds with excellent call quality.",
-        "specification": [
-            "Active Noise Cancellation",
-            "Advanced HearThrough",
-            "11-hour battery life"
-        ],
-        "availability": true,
-        "rating": 4.5
+      "product_id": "AC004",
+      "product_title": "Jabra 85t",
+      "product_image": "https://t.ly/aZFiT",
+      "category": "Accessories",
+      "price": 229.99,
+      "description": "Noise-canceling earbuds with excellent call quality.",
+      "specification": [
+        "Active Noise Cancellation",
+        "Advanced HearThrough",
+        "11-hour battery life"
+      ],
+      "availability": true,
+      "rating": 4.5
     },
     {
       "product_id": "LP005",
@@ -262,13 +262,29 @@
       "price": 1799.99,
       "description": "Ultra-portable business laptop with powerful performance and long battery life.",
       "specification": [
-          "Intel Core i7-13th Gen",
-          "16GB RAM",
-          "512GB SSD",
-          "Windows 11 Pro"
+        "Intel Core i7-13th Gen",
+        "16GB RAM",
+        "512GB SSD",
+        "Windows 11 Pro"
       ],
       "availability": true,
       "rating": 4.7
-  }
+    },
+    {
+      "product_id": "PH005",
+      "product_title": "iPhone 14",
+      "product_image": "https://shorturl.at/2WKaZ",
+      "category": "iPhone",
+      "price": 799.99,
+      "description": "Compact iPhone with impressive camera system and long battery life.",
+      "specification": [
+        "A15 Bionic chip",
+        "6.1-inch Super Retina XDR display",
+        "128GB storage",
+        "iOS 16"
+      ],
+      "availability": true,
+      "rating": 4.7
+    }
   ]
 }
