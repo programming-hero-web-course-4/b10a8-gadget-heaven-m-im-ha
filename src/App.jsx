@@ -7,6 +7,7 @@ import Stats from "./ui/Stats";
 import Cart from "./ui/Cart";
 import Wishlist from "./ui/Wishlist";
 import { ProductsProvider } from "./context/ProductsProvider";
+import Contact from "./ui/Contact";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/stats",
         element: <Stats />,
+      },
+      {
+        path: "/contact",
+        element: <Contact/>,
       },
       {
         path: "/cart",

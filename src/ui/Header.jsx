@@ -34,6 +34,12 @@ function Header() {
           >
             Statistics
           </NavLink>
+          <NavLink
+            className={pathname === "/contact" ? `bg-green-600` : ``}
+            to="/contact"
+          >
+            Contact Us
+          </NavLink>
         </div>
         <div className="flex gap-4">
           <button>
