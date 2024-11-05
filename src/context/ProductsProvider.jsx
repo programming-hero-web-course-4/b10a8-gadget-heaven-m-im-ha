@@ -7,8 +7,9 @@ export function ProductsProvider({ children }) {
   const [productDetails, setProductDetails] = useState({});
   const [isDetailsView, setIsDetailsView] = useState(false);
   const [addToCart, setAddToCart] = useState([]);
-    // console.log(addToCart);
-
+  const [wishlist, setWishlist] = useState([]);
+  // console.log(addToCart);
+  console.log(wishlist);
 
   return (
     <ProductContext.Provider
@@ -21,6 +22,8 @@ export function ProductsProvider({ children }) {
         setSelectCategory,
         addToCart,
         setAddToCart,
+        wishlist,
+        setWishlist,
       }}
     >
       {children}

@@ -2,8 +2,10 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 
 function Dashboard() {
-  const { addToCart, setAddToCart } = useContext(ProductContext);
+  const { addToCart, setAddToCart, wishlist, setWishlist } =
+    useContext(ProductContext);
   const [showModal, setShowModal] = useState(false);
+  const [isCart, setIsCart] = useState(true);
   const modalRef = useRef(null);
   // console.log(modalRef);
   // console.log(addToCart);
@@ -29,11 +31,17 @@ function Dashboard() {
     setAddToCart(sortedItemByPrice);
   }
 
-  function handleDeleteItem(item) {
+  function handleDeleteCartItem(item) {
     const filteredItem = addToCart.filter(
       (el) => el.product_id !== item.product_id,
     );
     setAddToCart(filteredItem);
+  }
+  function handleDeleteWishlistItem(item) {
+    const filteredItem = addToCart.filter(
+      (el) => el.product_id !== item.product_id,
+    );
+    setWishlist(filteredItem);
   }
 
   const totalCost =
@@ -57,45 +65,77 @@ function Dashboard() {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="flex justify-center gap-10">
-          <button className="border border-pink-600 px-4 py-1">Cart</button>
-          <button className="border border-pink-600 px-4 py-1">Wishlist</button>
+          <button
+            className={`${isCart ? `bg-green-400` : ``} border border-pink-600 px-4 py-1`}
+            onClick={() => setIsCart(true)}
+          >
+            Cart
+          </button>
+          <button
+           className={`${isCart ? `` : `bg-green-400`} border border-pink-600 px-4 py-1`}
+            onClick={() => setIsCart(false)}
+          >
+            Wishlist
+          </button>
         </div>
       </div>
-      <div className="flex justify-between">
-        <h3>Cart</h3>
-        <div className="flex gap-8">
-          <h4>Total Cost : ${totalCost.toFixed(2)}</h4>
-          <div className="flex gap-6">
-            <button
-              onClick={handleSortByPrice}
-              className="border border-pink-400 px-3 py-1"
-            >
-              Sort by price
-            </button>
-            <button
-              onClick={handleOpenModal}
-              className="border border-pink-400 px-3 py-1"
-            >
-              Purchase
-            </button>
+      {isCart ? (
+        <div className="flex justify-between">
+          <h3>Cart</h3>
+          <div className="flex gap-8">
+            <h4>Total Cost : ${totalCost.toFixed(2)}</h4>
+            <div className="flex gap-6">
+              <button
+                onClick={handleSortByPrice}
+                className="border border-pink-400 px-3 py-1"
+              >
+                Sort by price
+              </button>
+              <button
+                onClick={handleOpenModal}
+                className="border border-pink-400 px-3 py-1"
+              >
+                Purchase
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div>
+          <h3>Wishlist</h3>
+        </div>
+      )}
       <div className="grid grid-cols-1">
-        {addToCart.length > 0 &&
-          addToCart.map((item) => (
-            <div key={item.product_id} className="flex gap-10">
-              <div>
-                <img className="w-40" src={item.product_image} alt="" />
+        {isCart
+          ? addToCart.length > 0 &&
+            addToCart.map((item) => (
+              <div key={item.product_id} className="flex gap-10">
+                <div>
+                  <img className="w-40" src={item.product_image} alt="" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4>{item.product_title}</h4>
+                  <p>{item.description}</p>
+                  <p>price : {item.price}</p>
+                </div>
+                <button onClick={() => handleDeleteCartItem(item)}>✖️</button>
               </div>
-              <div className="flex flex-col gap-6">
-                <h4>{item.product_title}</h4>
-                <p>{item.description}</p>
-                <p>price : {item.price}</p>
+            ))
+          : wishlist.map((item) => (
+              <div key={item.product_id} className="flex gap-10">
+                <div>
+                  <img className="w-40" src={item.product_image} alt="" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4>{item.product_title}</h4>
+                  <p>{item.description}</p>
+                  <p>price : {item.price}</p>
+                </div>
+                <button onClick={() => handleDeleteWishlistItem(item)}>
+                  ✖️
+                </button>
               </div>
-              <button onClick={() => handleDeleteItem(item)}>✖️</button>
-            </div>
-          ))}
+            ))}
       </div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       {showModal && (

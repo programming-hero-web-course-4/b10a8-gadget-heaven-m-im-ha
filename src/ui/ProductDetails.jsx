@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 
 function ProductDetails() {
-  const { productDetails, addToCart, setAddToCart } =
+  const { productDetails, addToCart, setAddToCart,wishlist, setWishlist } =
     useContext(ProductContext);
   //   console.log(typeof productDetails);
 
@@ -10,6 +10,12 @@ function ProductDetails() {
     // console.log(product)
     if (!addToCart.some((item) => item.product_id === product.product_id)) {
       setAddToCart([...addToCart, product]);
+    }
+  }
+  function handleWishlist(product) {
+    // console.log(product)
+    if (!wishlist.some((item) => item.product_id === product.product_id)) {
+      setWishlist([...wishlist, product]);
     }
   }
 
