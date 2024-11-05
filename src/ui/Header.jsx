@@ -1,9 +1,10 @@
 import { useContext, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { ProductContext } from "../context/ProductsProvider";
 
 function Header() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const { setSelectCategory, setIsDetailsView,addToCart,wishlist } = useContext(ProductContext);
 
   function handleLogoClick() {
@@ -75,7 +76,7 @@ function Header() {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
-        <button>Shop Now</button>
+        <button onClick={()=>navigate("/dashboard")}>Shop Now</button>
       </div>
       <div>
         <img
