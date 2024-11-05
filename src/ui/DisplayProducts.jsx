@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
+import { useNavigate } from "react-router-dom";
 
 function DisplayProducts({ category }) {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   //   console.log(products);
   const { setProductDetails, setIsDetailsView } = useContext(ProductContext);
@@ -30,6 +32,7 @@ function DisplayProducts({ category }) {
   function handleProductDetails(product) {
     setProductDetails(product);
     setIsDetailsView(true);
+    navigate("/details")
   }
 
   return (

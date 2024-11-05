@@ -1,17 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReactStars from "react-rating-stars-component";
 
 function ProductDetails() {
-  const {
-    productDetails,
-    addToCart,
-    setAddToCart,
-    wishlist,
-    setWishlist,
-  } = useContext(ProductContext);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const { productDetails, addToCart, setAddToCart, wishlist, setWishlist } =
+    useContext(ProductContext);
   //   console.log(typeof productDetails);
 
   function handleAddToCart(product) {
@@ -34,6 +30,7 @@ function ProductDetails() {
     // console.log(product)
     if (!wishlist.some((item) => item.product_id === product.product_id)) {
       setWishlist([...wishlist, product]);
+      setIsDisabled(true);
       toast.success(`Congrats! you have added the product in the wishlist`, {
         position: "top-center",
         autoClose: 2000,
@@ -82,22 +79,31 @@ function ProductDetails() {
           </ol>
         </div>
         <h4>Rating⭐</h4>
-        <div className="flex gap-4 items-center">
-          <ReactStars classNames="flex gap-1" {...stars}/>
+        <div className="flex items-center gap-4">
+          <ReactStars classNames="flex gap-1" {...stars} />
           <p>{productDetails.rating}</p>
         </div>
         <div className="flex gap-10">
           <button
             onClick={() => handleAddToCart(productDetails)}
-            className="border border-green-300 px-2"
+            className="border border-green-300 px-2 flex gap-1 items-center justify-center"
           >
+            <span>
+
             Add to cart
+            </span>
+            <img src="./assets/cart.png" alt="" />
           </button>
           <button
+            disabled={isDisabled}
             onClick={() => handleWishlist(productDetails)}
-            className="border border-green-300 px-2"
+            className={
+              isDisabled
+                ? `border border-green-300 bg-slate-300 px-2`
+                : `border border-green-300 px-2`
+            }
           >
-            Wishlist
+            <img src="./assets/wishlist.png" alt="" />
           </button>
         </div>
       </div>

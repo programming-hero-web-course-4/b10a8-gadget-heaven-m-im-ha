@@ -8,6 +8,7 @@ import Cart from "./ui/Cart";
 import Wishlist from "./ui/Wishlist";
 import { ProductsProvider } from "./context/ProductsProvider";
 import Contact from "./ui/Contact";
+import ProductDetails from "./ui/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/details",
+        element: <ProductDetails/>,
       },
       {
         path: "/dashboard",

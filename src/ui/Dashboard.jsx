@@ -96,8 +96,9 @@ function Dashboard() {
                 Sort by price
               </button>
               <button
+              disabled={addToCart.length > 0 ? false : true}
                 onClick={handleOpenModal}
-                className="border border-pink-400 px-3 py-1"
+                className={addToCart.length > 0 ? `border border-pink-400 px-3 py-1` : `bg-slate-400 border border-pink-400 px-3 py-1`}
               >
                 Purchase
               </button>
