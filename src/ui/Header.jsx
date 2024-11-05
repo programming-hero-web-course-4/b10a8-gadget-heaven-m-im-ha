@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ProductContext } from "../context/ProductsProvider";
 
@@ -10,6 +10,15 @@ function Header() {
     setSelectCategory("All Product");
     setIsDetailsView(false);
   }
+
+  useEffect(() => {
+    const updateTitle = () => {
+      const newTitle = `${pathname.slice(1)} | Gadget Heaven`;
+      document.title = newTitle;
+    };
+
+    updateTitle();
+  }, [pathname]);
 
   return (
     <div className="bg-purple-400">
