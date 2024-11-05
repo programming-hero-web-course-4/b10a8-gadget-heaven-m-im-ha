@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ProductContext } from "../context/ProductsProvider";
 import { useNavigate } from "react-router-dom";
 
+
 function Dashboard() {
   const { addToCart, setAddToCart, wishlist, setWishlist } =
     useContext(ProductContext);

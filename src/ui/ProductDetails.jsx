@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { ProductContext } from "../context/ProductsProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductDetails() {
-  const { productDetails, addToCart, setAddToCart,wishlist, setWishlist } =
+  const { productDetails, addToCart, setAddToCart, wishlist, setWishlist } =
     useContext(ProductContext);
   //   console.log(typeof productDetails);
 
@@ -10,17 +12,38 @@ function ProductDetails() {
     // console.log(product)
     if (!addToCart.some((item) => item.product_id === product.product_id)) {
       setAddToCart([...addToCart, product]);
+      toast.success(`Congrats! you have added the product in the cart`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   }
   function handleWishlist(product) {
     // console.log(product)
     if (!wishlist.some((item) => item.product_id === product.product_id)) {
       setWishlist([...wishlist, product]);
+      toast.success(`Congrats! you have added the product in the wishlist`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   }
 
   return (
     <div className="flex gap-10">
+      <ToastContainer />
       <div>
         <img className="w-80" src={productDetails.product_image} alt="" />
       </div>
