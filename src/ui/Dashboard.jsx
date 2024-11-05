@@ -42,7 +42,7 @@ function Dashboard() {
     setAddToCart(filteredItem);
   }
   function handleDeleteWishlistItem(item) {
-    const filteredItem = addToCart.filter(
+    const filteredItem = wishlist.filter(
       (el) => el.product_id !== item.product_id,
     );
     setWishlist(filteredItem);
