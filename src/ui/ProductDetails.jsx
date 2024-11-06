@@ -60,7 +60,7 @@ function ProductDetails() {
   return (
     <div>
       <ToastContainer />
-      <div className="flex gap-10 bg-white max-w-5xl p-4 rounded-2xl mx-auto -mt-40">
+      <div className="flex gap-10 bg-white max-w-5xl p-4 rounded-2xl mx-auto -mt-[27rem]">
         <div>
           <img className="w-[22rem] h-[22rem] rounded-2xl" src={productDetails.product_image} alt="" />
         </div>
