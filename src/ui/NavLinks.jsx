@@ -73,7 +73,7 @@ function NavLinks() {
       </div>
       <div className="flex gap-6">
         <button className="relative">
-          <img src="./assets/cart.png" alt="Cart" />
+          <img src="/assets/cart.png" alt="Cart" />
           {addToCart.length > 0 && (
             <span
               className={`${pathname === "/" || pathname === "/home" ? "bg-purple-500 text-white" : "bg-gray-200 text-black"} absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 transform rounded-full border border-white px-[6px] py-[1px] text-xs font-semibold`}
@@ -83,7 +83,7 @@ function NavLinks() {
           )}
         </button>
         <button className="relative">
-          <img src="./assets/wishlist.png" alt="Wishlist" />
+          <img src="/assets/wishlist.png" alt="Wishlist" />
           {wishlist.length > 0 && (
             <span
               className={`${pathname === "/" || pathname === "/home" ? "bg-purple-500 text-white" : "bg-gray-200 text-black"} absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 transform rounded-full border border-white px-[6px] py-[1px] text-xs font-semibold`}

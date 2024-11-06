@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 function DisplayProducts({ category }) {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-  //   console.log(products);
   const { setProductDetails, setIsDetailsView } = useContext(ProductContext);
 
   useEffect(() => {
@@ -27,12 +26,10 @@ function DisplayProducts({ category }) {
       ? products
       : products.filter((product) => product.category === category);
 
-  //   console.log(filteredProducts);
-
   function handleProductDetails(product) {
     setProductDetails(product);
     setIsDetailsView(true);
-    navigate("/details")
+    navigate(`/details/${product.product_id}`)
   }
 
   return (

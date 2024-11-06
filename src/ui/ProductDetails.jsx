@@ -8,10 +8,12 @@ function ProductDetails() {
   const [isDisabled, setIsDisabled] = useState(false);
   const { productDetails, addToCart, setAddToCart, wishlist, setWishlist } =
     useContext(ProductContext);
-  //   console.log(typeof productDetails);
+
+  if (!productDetails || !productDetails.specification) {
+    return <p>Loading product details...</p>;
+  }
 
   function handleAddToCart(product) {
-    // console.log(product)
     if (!addToCart.some((item) => item.product_id === product.product_id)) {
       setAddToCart([...addToCart, product]);
       toast.success(`Congrats! your Product is added in the cart`, {
@@ -27,7 +29,6 @@ function ProductDetails() {
     }
   }
   function handleWishlist(product) {
-    // console.log(product)
     if (!wishlist.some((item) => item.product_id === product.product_id)) {
       setWishlist([...wishlist, product]);
       setIsDisabled(true);
@@ -90,7 +91,7 @@ function ProductDetails() {
               className="flex items-center justify-center gap-1 bg-Purple text-white px-6 py-1 rounded-3xl"
             >
               <span className="text-sm">Add to Cart</span>
-              <img src="./assets/cart-btn.png" alt="" />
+              <img src="/assets/cart-btn.png" alt="" />
             </button>
             <button
               disabled={isDisabled}
@@ -101,7 +102,7 @@ function ProductDetails() {
                   : ``
               }
             >
-              <img src="./assets/wishlist.png" alt="" />
+              <img src="/assets/wishlist.png" alt="" />
             </button>
           </div>
         </div>

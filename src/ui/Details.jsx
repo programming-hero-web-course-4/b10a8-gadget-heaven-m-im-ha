@@ -1,6 +1,37 @@
+import { useContext, useEffect } from "react";
 import ProductDetails from "./ProductDetails"
+import { ProductContext } from "../context/ProductsProvider";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Details() {
+    const { productDetails, setProductDetails } = useContext(ProductContext);
+    const { productId } = useParams();
+    const navigate = useNavigate();
+  
+    useEffect(() => {
+      async function fetchProductDetails() {
+        try {
+          const response = await fetch("/assets/data/products.json");
+          const data = await response.json();
+          const product = data.products.find(
+            (item) => item.product_id === parseInt(productId)
+          );
+          if (product) {
+            setProductDetails(product);
+          } else {
+            navigate("/home");
+          }
+        } catch (error) {
+          console.error("Failed to fetch product data:", error);
+          navigate("/home");
+        }
+      }
+  
+      if (!productDetails || !Object.keys(productDetails).length) {
+        fetchProductDetails();
+      }
+    }, [productId, productDetails, setProductDetails, navigate]);
+
     return (
         <div className="mt-10 mb-28">
             <div  className="bg-Purple">

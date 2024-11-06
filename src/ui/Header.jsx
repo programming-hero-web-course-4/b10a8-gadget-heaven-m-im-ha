@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NavLinks from "./NavLinks";
-import Banner from "./Banner";
 
 function Header() {
   const { pathname } = useLocation();
