@@ -4,10 +4,12 @@ import Footer from "./Footer";
 
 function AppLayout() {
   return (
-    <div className="mx-auto max-w-7xl font-sora">
-      <Header />
-      <div>
-        <Outlet />
+    <div>
+      <div className="font-sora mx-auto max-w-7xl">
+        <Header />
+        <div>
+          <Outlet />
+        </div>
       </div>
       <Footer />
     </div>

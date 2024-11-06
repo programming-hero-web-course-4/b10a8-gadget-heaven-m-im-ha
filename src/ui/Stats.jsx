@@ -17,7 +17,7 @@ function Stats() {
   const { addToCart } = useContext(ProductContext);
 
   return (
-    <div>
+    <div className="mb-16">
       <div className="bg-Purple text-center mt-10 pb-10">
         <h3 className="pt-10 mb-4 text-white font-semibold text-xl">Statistics</h3>
         <p className="max-w-2xl mx-auto text-sm text-white/90">

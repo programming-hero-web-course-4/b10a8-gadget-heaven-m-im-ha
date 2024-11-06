@@ -1,39 +1,32 @@
 function Footer() {
-    return (
-        <div className="mx-36 mb-4">
-            <div className="text-center mb-8 mt-16">
-                <h2 className="text-3xl font-semibold">Gadget Heaven</h2>
-                <p>Leading the way in cutting-edge technology and innovation.</p>
-            </div>
-            <div className="grid grid-cols-3 gap-2 mx-auto ml-48">
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Product Support</li>
-                        <li>Order Tracking</li>
-                        <li>Shipping & Delivery</li>
-                        <li>Returns</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li>About Us</li>
-                        <li>Careers</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-                    <ul>
-                        <li>Terms of Service</li>
-                        <li>Privacy Policy</li>
-                        <li>Cookie Policy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <footer className="footer  bg-neutral p-10 text-white">
+      <div className="">
+        <h2 className="text-3xl font-semibold">Gadget Heaven</h2>
+        <p>Leading the way in cutting-edge technology and innovation.</p>
+      </div>
+      <nav>
+        <h6 className="footer-title">Services</h6>
+        <a className="link-hover link">Branding</a>
+        <a className="link-hover link">Design</a>
+        <a className="link-hover link">Marketing</a>
+        <a className="link-hover link">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 className="footer-title">Company</h6>
+        <a className="link-hover link">About us</a>
+        <a className="link-hover link">Contact</a>
+        <a className="link-hover link">Jobs</a>
+        <a className="link-hover link">Press kit</a>
+      </nav>
+      <nav>
+        <h6 className="footer-title">Legal</h6>
+        <a className="link-hover link">Terms of use</a>
+        <a className="link-hover link">Privacy policy</a>
+        <a className="link-hover link">Cookie policy</a>
+      </nav>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

@@ -14,7 +14,7 @@ function ProductDetails() {
     // console.log(product)
     if (!addToCart.some((item) => item.product_id === product.product_id)) {
       setAddToCart([...addToCart, product]);
-      toast.success(`Congrats! you have added the product in the cart`, {
+      toast.success(`Congrats! your Product is added in the cart`, {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
@@ -31,7 +31,7 @@ function ProductDetails() {
     if (!wishlist.some((item) => item.product_id === product.product_id)) {
       setWishlist([...wishlist, product]);
       setIsDisabled(true);
-      toast.success(`Congrats! you have added the product in the wishlist`, {
+      toast.success(`Congrats! Product added in the wishlist`, {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,

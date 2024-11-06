@@ -61,7 +61,7 @@ function Dashboard() {
   }, [showModal]);
 
   return (
-    <div>
+    <div className="mb-16">
       <div className="bg-Purple mt-12 py-12 text-center">
         <h3 className="text-xl font-semibold text-white">Dashboard</h3>
         <p className="mx-auto mt-3 max-w-3xl text-sm text-white">

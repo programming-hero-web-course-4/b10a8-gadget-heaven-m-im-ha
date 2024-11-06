@@ -36,7 +36,7 @@ function DisplayProducts({ category }) {
   }
 
   return (
-    <div className="">
+    <div className="mb-10">
       {filteredProducts.length > 0 && (
         <div className="grid grid-cols-3 gap-10">
           {filteredProducts.map((product) => (
