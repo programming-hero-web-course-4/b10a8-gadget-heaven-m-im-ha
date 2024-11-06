@@ -62,21 +62,29 @@ function Dashboard() {
 
   return (
     <div>
-      <div className="text-center">
-        <h3>Dashboard</h3>
-        <p>
+      <div className="bg-Purple mt-12 py-12 text-center">
+        <h3 className="text-xl font-semibold text-white">Dashboard</h3>
+        <p className="mx-auto mt-3 max-w-3xl text-sm text-white">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
-        <div className="flex justify-center gap-10">
+        <div className="mt-7 flex justify-center gap-6">
           <button
-            className={`${isCart ? `bg-green-400` : ``} border border-pink-600 px-4 py-1`}
+            className={
+              isCart
+                ? `text-Purple rounded-full bg-white px-8 py-2`
+                : `rounded-full border border-white px-8 py-2 text-white`
+            }
             onClick={() => setIsCart(true)}
           >
             Cart
           </button>
           <button
-            className={`${isCart ? `` : `bg-green-400`} border border-pink-600 px-4 py-1`}
+            className={
+              isCart
+                ? `rounded-full border border-white px-8 py-2 text-white`
+                : `text-Purple rounded-full bg-white px-8 py-2`
+            }
             onClick={() => setIsCart(false)}
           >
             Wishlist
@@ -84,21 +92,28 @@ function Dashboard() {
         </div>
       </div>
       {isCart ? (
-        <div className="flex justify-between">
-          <h3>Cart</h3>
+        <div className="mx-10 mt-10 flex items-center justify-between">
+          <h3 className="text-xl font-bold">Cart</h3>
           <div className="flex gap-8">
-            <h4>Total Cost : ${totalCost.toFixed(2)}</h4>
+            <h4 className="text-xl font-bold">
+              Total Cost : ${totalCost.toFixed(2)}
+            </h4>
             <div className="flex gap-6">
               <button
                 onClick={handleSortByPrice}
-                className="border border-pink-400 px-3 py-1"
+                className="border border-Purple rounded-full text-sm flex gap-1 justify-center items-center px-6 py-1"
               >
-                Sort by price
+                <span>Sort by price</span>
+                <img src="./assets/sort.png" alt="" />
               </button>
               <button
-              disabled={addToCart.length > 0 ? false : true}
+                disabled={addToCart.length > 0 ? false : true}
                 onClick={handleOpenModal}
-                className={addToCart.length > 0 ? `border border-pink-400 px-3 py-1` : `bg-slate-400 border border-pink-400 px-3 py-1`}
+                className={
+                  addToCart.length > 0
+                    ? `bg-Purple px-6 py-1 rounded-full text-white`
+                    : `bg-slate-600 px-6 py-1 rounded-full text-white`
+                }
               >
                 Purchase
               </button>
@@ -106,45 +121,48 @@ function Dashboard() {
           </div>
         </div>
       ) : (
-        <div>
-          <h3>Wishlist</h3>
+        <div className="mt-10 mx-10">
+          <h3 className="text-xl font-bold">Wishlist</h3>
         </div>
       )}
       <div className="grid grid-cols-1">
         {isCart ? (
           addToCart.length > 0 &&
           addToCart.map((item) => (
-            <div key={item.product_id} className="flex gap-10">
+            <div key={item.product_id} className="w-[60rem] mx-auto mt-10 border-2 p-4 border-slate-200 flex gap-10 items-center">
               <div>
                 <img className="w-40" src={item.product_image} alt="" />
               </div>
               <div className="flex flex-col gap-3">
-                <h4>{item.product_title}</h4>
-                <p>{item.description}</p>
-                <p>price : {item.price}</p>
+                <h4 className="text-lg font-semibold">{item.product_title}</h4>
+                <p className="text-sm text-slate-700">{item.description}</p>
+                <p className="text-sm text-slate-900 font-semibold">price : {item.price}</p>
               </div>
-              <button onClick={() => handleDeleteCartItem(item)}>✖️</button>
+              <button className="ml-auto" onClick={() => handleDeleteCartItem(item)}>
+                <img src="./assets/delete.png" alt="" />
+              </button>
             </div>
           ))
         ) : wishlist.length > 0 ? (
           wishlist.map((item) => (
-            <div key={item.product_id} className="flex gap-10">
+            <div key={item.product_id} className="w-[60rem] mx-auto mt-10 border-2 p-4 border-slate-200 flex gap-10 items-center">
               <div>
                 <img className="w-40" src={item.product_image} alt="" />
               </div>
               <div className="flex flex-col gap-3">
-                <h4>{item.product_title}</h4>
-                <p>{item.description}</p>
-                <p>price : {item.price}</p>
+                <h4 className="text-lg font-semibold">{item.product_title}</h4>
+                <p className="text-sm text-slate-700">{item.description}</p>
+                <p className="text-sm text-slate-900 font-semibold">price : {item.price}</p>
               </div>
-              <button onClick={() => handleDeleteWishlistItem(item)}>✖️</button>
+              <button className="ml-auto" onClick={() => handleDeleteWishlistItem(item)}>
+                <img src="./assets/delete.png" alt="" />
+              </button>
             </div>
           ))
         ) : (
-          <h1>Add products for wishlist</h1>
+          <h1 className="mx-10">Add products for wishlist</h1>
         )}
       </div>
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
       {showModal && (
         <dialog
           id="my_modal_5"
