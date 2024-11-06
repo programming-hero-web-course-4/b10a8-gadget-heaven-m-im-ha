@@ -18,15 +18,15 @@ function Stats() {
 
   return (
     <div>
-      <div>
-        <h3>Statistics</h3>
-        <p>
+      <div className="bg-Purple text-center mt-10 pb-10">
+        <h3 className="pt-10 mb-4 text-white font-semibold text-xl">Statistics</h3>
+        <p className="max-w-2xl mx-auto text-sm text-white/90">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
       </div>
       <div>
-        <h3 className="mb-10 text-center">Statistics</h3>
+        <h3 className="mb-10 font-semibold mx-10 mt-10">Statistics</h3>
 
         <div>
           {addToCart.length > 0 ? (
@@ -57,7 +57,7 @@ function Stats() {
               <Scatter dataKey="rating" fill="red" />
             </ComposedChart>
           ) : (
-            <h1>First add products to the cart</h1>
+            <h1 className="text-center font-semibold">First add products to the cart</h1>
           )}
         </div>
       </div>

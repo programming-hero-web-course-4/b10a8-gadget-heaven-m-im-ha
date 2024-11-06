@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="mt-10 flex flex-col gap-4 justify-center items-center">
       <label className="input input-bordered flex w-1/3 items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
