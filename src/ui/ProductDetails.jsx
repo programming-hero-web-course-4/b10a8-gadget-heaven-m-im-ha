@@ -58,53 +58,52 @@ function ProductDetails() {
   };
 
   return (
-    <div className="flex gap-10">
+    <div>
       <ToastContainer />
-      <div>
-        <img className="w-80" src={productDetails.product_image} alt="" />
-      </div>
-      <div>
-        <h3>{productDetails.product_title}</h3>
-        <p>price : ${productDetails.price}</p>
-        <button className="rounded-xl border border-green-400 px-2">
-          {productDetails.availability === true ? `In Stock` : `Out of stock`}
-        </button>
-        <p>{productDetails.description}</p>
+      <div className="flex gap-10 bg-white max-w-5xl p-4 rounded-2xl mx-auto -mt-40">
         <div>
-          <p>Specification :</p>
-          <ol className="ml-4 list-decimal">
-            {productDetails.specification.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ol>
+          <img className="w-[22rem] h-[22rem] rounded-2xl" src={productDetails.product_image} alt="" />
         </div>
-        <h4>Rating⭐</h4>
-        <div className="flex items-center gap-4">
-          <ReactStars classNames="flex gap-1" {...stars} />
-          <p>{productDetails.rating}</p>
-        </div>
-        <div className="flex gap-10">
-          <button
-            onClick={() => handleAddToCart(productDetails)}
-            className="border border-green-300 px-2 flex gap-1 items-center justify-center"
-          >
-            <span>
-
-            Add to cart
-            </span>
-            <img src="./assets/cart.png" alt="" />
+        <div>
+          <h3 className="text-xl font-bold">{productDetails.product_title}</h3>
+          <p className="font-medium">price : ${productDetails.price}</p>
+          <button className="mt-2 text-green-500 bg-green-100 rounded-xl border border-green-400 px-2 text-sm">
+            {productDetails.availability === true ? `In Stock` : `Out of stock`}
           </button>
-          <button
-            disabled={isDisabled}
-            onClick={() => handleWishlist(productDetails)}
-            className={
-              isDisabled
-                ? `border border-green-300 bg-slate-300 px-2`
-                : `border border-green-300 px-2`
-            }
-          >
-            <img src="./assets/wishlist.png" alt="" />
-          </button>
+          <p className="text-sm mt-2 text-gray-500">{productDetails.description}</p>
+          <div className="mt-3">
+            <p className="font-bold">Specification :</p>
+            <ol className="ml-4 list-decimal">
+              {productDetails.specification.map((item, i) => (
+                <li className="text-sm text-gray-500" key={i}>{item}</li>
+              ))}
+            </ol>
+          </div>
+          <h4 className="mt-2 font-bold">Rating⭐</h4>
+          <div className="mt-2 flex items-center gap-4">
+            <ReactStars classNames="flex gap-1" {...stars} />
+            <p className="bg-gray-200 px-2 rounded-2xl text-sm">{productDetails.rating}</p>
+          </div>
+          <div className="flex gap-4 mt-3">
+            <button
+              onClick={() => handleAddToCart(productDetails)}
+              className="flex items-center justify-center gap-1 bg-Purple text-white px-6 py-1 rounded-3xl"
+            >
+              <span className="text-sm">Add to Cart</span>
+              <img src="./assets/cart-btn.png" alt="" />
+            </button>
+            <button
+              disabled={isDisabled}
+              onClick={() => handleWishlist(productDetails)}
+              className={
+                isDisabled
+                  ? ` bg-slate-300 rounded-full`
+                  : ``
+              }
+            >
+              <img src="./assets/wishlist.png" alt="" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

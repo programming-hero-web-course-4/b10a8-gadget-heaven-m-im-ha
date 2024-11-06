@@ -19,25 +19,25 @@ function NavLinks() {
       </NavLink>
       <div className="flex gap-8 text-sm text-white/90">
         <NavLink
-          className={pathname === "/home" ? `bg-green-600` : ``}
+          className={pathname === "/home" ? `border-b-2 border-white/70 h-6` : ``}
           to="/home"
         >
           Home
         </NavLink>
         <NavLink
-          className={pathname === "/dashboard" ? `bg-green-600` : ``}
+          className={pathname === "/dashboard" ? `border-b-2 border-white/70 h-6` : ``}
           to="/dashboard"
         >
           Dashboard
         </NavLink>
         <NavLink
-          className={pathname === "/stats" ? `bg-green-600` : ``}
+          className={pathname === "/stats" ? `border-b-2 border-white/70 h-6` : ``}
           to="/stats"
         >
           Statistics
         </NavLink>
         <NavLink
-          className={pathname === "/contact" ? `bg-green-600` : ``}
+          className={pathname === "/contact" ? `border-b-2 border-white/70 h-6` : ``}
           to="/contact"
         >
           Contact Us

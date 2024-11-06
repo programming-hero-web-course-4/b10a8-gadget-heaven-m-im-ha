@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import DisplayProducts from "./DisplayProducts";
 import SideNav from "./SideNav";
 import { ProductContext } from "../context/ProductsProvider";
-import ProductDetails from "./ProductDetails";
 import { useLocation } from "react-router-dom";
 import Hero from "./Hero";
+import Details from "./Details";
 
 function Home() {
   const { isDetailsView, setIsDetailsView, selectCategory, setSelectCategory } =
@@ -23,7 +23,7 @@ function Home() {
       <Hero/>
       <h3 className="text-center">Explore Cutting-Edge Gadgets</h3>
       {isDetailsView ? (
-        <ProductDetails />
+        <Details/>
       ) : (
         <div className="mx-auto flex max-w-5xl gap-10">
           <SideNav onCategorySelect={setSelectCategory} />

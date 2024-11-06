@@ -8,7 +8,7 @@ import Cart from "./ui/Cart";
 import Wishlist from "./ui/Wishlist";
 import { ProductsProvider } from "./context/ProductsProvider";
 import Contact from "./ui/Contact";
-import ProductDetails from "./ui/ProductDetails";
+import Details from "./ui/Details";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details",
-        element: <ProductDetails/>,
+        element: <Details/>,
       },
       {
         path: "/dashboard",

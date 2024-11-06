@@ -14,7 +14,7 @@ function Banner() {
         </p>
         <div className="flex justify-center items-center mt-6 mb-48">
           <button
-            className="text-Purple rounded-2xl bg-white px-4 py-1 font-bold"
+            className="text-Purple rounded-3xl bg-white px-4 py-2 font-bold"
             onClick={() => navigate("/dashboard")}
           >
             Shop Now
