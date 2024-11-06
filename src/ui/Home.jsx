@@ -4,6 +4,7 @@ import SideNav from "./SideNav";
 import { ProductContext } from "../context/ProductsProvider";
 import ProductDetails from "./ProductDetails";
 import { useLocation } from "react-router-dom";
+import Hero from "./Hero";
 
 function Home() {
   const { isDetailsView, setIsDetailsView, selectCategory, setSelectCategory } =
@@ -19,6 +20,7 @@ function Home() {
 
   return (
     <div>
+      <Hero/>
       <h3 className="text-center">Explore Cutting-Edge Gadgets</h3>
       {isDetailsView ? (
         <ProductDetails />
