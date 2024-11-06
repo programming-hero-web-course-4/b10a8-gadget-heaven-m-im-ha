@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import Banner from "./Banner";
-import Hero from "./Hero";
 
 function Header() {
   const { pathname } = useLocation();
@@ -17,9 +16,8 @@ function Header() {
   }, [pathname]);
 
   return (
-    <div className="bg-Purple mt-5 rounded-2xl">
+    <div>
       <NavLinks/>
-      <Banner/>
     </div>
   );
 }

@@ -13,7 +13,7 @@ function NavLinks() {
   }
 
   return (
-    <nav className="flex justify-between mx-10 pt-10">
+    <nav className="flex justify-between items-center px-10 pt-5 bg-Purple mt-5 rounded-2xl rounded-bl-none rounded-br-none">
       <NavLink className="text-xl text-white" onClick={handleLogoClick} to="/">
         Gadget Heaven
       </NavLink>
