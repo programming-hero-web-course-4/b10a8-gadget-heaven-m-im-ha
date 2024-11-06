@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Banner() {
   const navigate = useNavigate();
   return (
-    <div className="bg-Purple rounded-2xl">
+    <div>
       <div className="flex flex-col justify-center">
         <h2 className="mx-auto mt-6 max-w-5xl text-center text-5xl font-bold leading-snug text-white">
           Upgrade Your Tech Accessorize with Gadget Heaven Accessories

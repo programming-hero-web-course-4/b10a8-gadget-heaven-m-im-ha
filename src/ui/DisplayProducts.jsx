@@ -36,23 +36,23 @@ function DisplayProducts({ category }) {
   }
 
   return (
-    <div>
+    <div className="">
       {filteredProducts.length > 0 && (
         <div className="grid grid-cols-3 gap-10">
           {filteredProducts.map((product) => (
-            <div className="" key={product.product_id}>
+            <div className="p-4 rounded-lg border-2 border-slate-200" key={product.product_id}>
               <div className="w-full">
                 <img
-                  className="mx-auto h-40 w-56"
+                  className=" mx-auto h-40 w-56"
                   src={product.product_image}
                   alt=""
                 />
               </div>
-              <h3>{product.product_title}</h3>
-              <p>price : {product.price}</p>
+              <h3 className="mt-2 font-semibold">{product.product_title}</h3>
+              <p className="text-sm text-slate-700">price : ${product.price}</p>
               <button
                 onClick={() => handleProductDetails(product)}
-                className="rounded-xl border border-green-300 px-4 py-1"
+                className="mt-2 rounded-xl text-Purple text-sm font-semibold border border-Purple px-4 py-1"
               >
                 View Details
               </button>

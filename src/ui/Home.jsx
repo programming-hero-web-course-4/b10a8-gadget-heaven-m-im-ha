@@ -21,16 +21,16 @@ function Home() {
 
   return (
     <div>
-      <div className="bg-Purple rounded-tl-none rounded-tr-none rounded-2xl">
+      <div className="bg-Purple rounded-tl-none rounded-tr-none rounded-2xl h-[30rem]">
         <Banner />
         <Hero />
       </div>
-      <h3 className="text-center">Explore Cutting-Edge Gadgets</h3>
+      <h3 className="text-center text-3xl font-bold mt-96 mb-10">Explore Cutting-Edge Gadgets</h3>
       {isDetailsView ? (
         <Details />
       ) : (
         <div className="mx-auto flex max-w-5xl gap-10">
-          <SideNav onCategorySelect={setSelectCategory} />
+          <SideNav />
           <DisplayProducts category={selectCategory} />
         </div>
       )}

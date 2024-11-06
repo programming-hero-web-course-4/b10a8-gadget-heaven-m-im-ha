@@ -72,21 +72,25 @@ function NavLinks() {
         </NavLink>
       </div>
       <div className="flex gap-6">
-        <button>
-          <img src="./assets/cart.png" alt="" />
-          <p
-            className={`${addToCart.length === 0 ? "" : `border-greeborder-green-300 absolute z-10 -mt-14 ml-7 rounded-full border px-[8px] font-semibold text-white`}`}
-          >
-            {addToCart.length === 0 ? "" : addToCart.length}
-          </p>
+        <button className="relative">
+          <img src="./assets/cart.png" alt="Cart" />
+          {addToCart.length > 0 && (
+            <span
+              className={`${pathname === "/" || pathname === "/home" ? "bg-purple-500 text-white" : "bg-gray-200 text-black"} absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 transform rounded-full border border-white px-[6px] py-[1px] text-xs font-semibold`}
+            >
+              {addToCart.length}
+            </span>
+          )}
         </button>
-        <button>
-          <img src="./assets/wishlist.png" alt="" />
-          <p
-            className={`${wishlist.length === 0 ? "" : `absolute z-10 -mt-14 ml-7 rounded-full border border-green-300 px-[8px] font-semibold text-white`}`}
-          >
-            {wishlist.length === 0 ? "" : wishlist.length}
-          </p>
+        <button className="relative">
+          <img src="./assets/wishlist.png" alt="Wishlist" />
+          {wishlist.length > 0 && (
+            <span
+              className={`${pathname === "/" || pathname === "/home" ? "bg-purple-500 text-white" : "bg-gray-200 text-black"} absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 transform rounded-full border border-white px-[6px] py-[1px] text-xs font-semibold`}
+            >
+              {wishlist.length}
+            </span>
+          )}
         </button>
       </div>
     </nav>
